@@ -50,7 +50,9 @@ if ingredients_list:
 
     # New section to didplay smmothiefroot nutrtion information
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    st.text(smoothiefroot_response.json())
+    # st.text(smoothiefroot_response.json())
+
+    st_df = st.dataframe(data=smoothiefroot_response.json(), user_container_width=True)
 
 
     #st.write(my_insert_stmt)
