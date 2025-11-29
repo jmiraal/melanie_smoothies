@@ -22,7 +22,7 @@ session = cnx.session()
 # session = get_active_session()
 
 
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME').col('SEARCH_ON'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 
 
 pd_df = my_dataframe.to_pandas()
